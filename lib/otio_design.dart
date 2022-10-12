@@ -1,7 +1,7 @@
 library otio_design;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:flutter/widgets.dart';
+
+export 'theme/responsive_theme.dart';
+export 'theme/theme.dart';
+export 'widgets/widgets.dart';

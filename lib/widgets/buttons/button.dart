@@ -45,7 +45,7 @@ class ButtonPrimary extends BaseButton {
   ButtonStyle getImplementationStyle(BuildContext context) {
     final colors = AppTheme.of(context).colors.buttons;
     return TextButton.styleFrom(
-      primary: colors.primaryForeground,
+      foregroundColor: colors.primaryForeground,
       backgroundColor: colors.primaryBackground,
     );
   }
@@ -59,7 +59,7 @@ class ButtonSecondary extends BaseButton {
   ButtonStyle getImplementationStyle(BuildContext context) {
     final colors = AppTheme.of(context).colors.buttons;
     return TextButton.styleFrom(
-      primary: colors.secondaryForeground,
+      foregroundColor: colors.secondaryForeground,
       backgroundColor: colors.secondaryBackground,
     );
   }
@@ -73,7 +73,7 @@ class ButtonThird extends BaseButton {
   ButtonStyle getImplementationStyle(BuildContext context) {
     final colors = AppTheme.of(context).colors.buttons;
     return TextButton.styleFrom(
-      primary: colors.thirdForeground,
+      foregroundColor: colors.thirdForeground,
       backgroundColor: colors.thirdBackground,
     );
   }

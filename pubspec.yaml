@@ -1,5 +1,5 @@
-name: otio_design
-description: A new Flutter package project.
+name: falotier_design
+description: A PoC for state management solutions.
 version: 0.0.1
 homepage:
 
@@ -10,7 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.1.5
+  flutter_svg: ^1.1.6
+  gap: ^2.0.0
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -22,7 +24,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  uses-material-design: true
   fonts:
     - family: SFProDisplayBold
       fonts:
@@ -39,6 +41,13 @@ flutter:
     - family: SFProTextSemibold
       fonts:
         - asset: assets/fonts/SFProText-Semibold.ttf
+    - family: OldNewspaperRegular
+      fonts:
+        - asset: assets/fonts/OldNewspaperTypes.ttf
+
+  assets:
+    - assets/audio/
+    - assets/images/
 
   # To add assets to your package, add an assets section, like this:
   # assets:

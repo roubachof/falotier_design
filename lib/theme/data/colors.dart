@@ -1,6 +1,8 @@
+import 'package:equatable/equatable.dart';
+import 'package:falotier_design/theme/utils/named.dart';
 import 'package:flutter/rendering.dart';
 
-class AppColorsData {
+class AppColorsData extends Equatable {
   const AppColorsData({
     required this.accent,
     required this.foreground,
@@ -26,15 +28,15 @@ class AppColorsData {
       );
 
   factory AppColorsData.dark() => AppColorsData(
-        accent: const Color(0xFF6C61E1),
-        foreground: const Color(0xFF28285a),
-        background: const Color(0xFFecf5fb),
+        accent: const Color(0xFFffa726),
+        foreground: const Color(0xFFf5f5f5),
+        background: const Color(0xFF000000),
         foregroundSecondary: const Color(0xFFFFFFFF),
-        backgroundSecondary: const Color(0xFF28285a),
+        backgroundSecondary: const Color(0xFF050505),
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
-        error: const Color(0xFFff7c56),
-        buttons: ButtonColorsData.light(),
+        error: const Color(0xFFf4511e),
+        buttons: ButtonColorsData.dark(),
       );
 
   factory AppColorsData.highContrast() => AppColorsData(
@@ -59,6 +61,18 @@ class AppColorsData {
   final Color error;
 
   final ButtonColorsData buttons;
+
+  @override
+  List<Object?> get props => [
+        accent.named('accent'),
+        foreground.named('foreground'),
+        background.named('background'),
+        foregroundSecondary.named('foregroundSecondary'),
+        backgroundSecondary.named('backgroundSecondary'),
+        success.named('success'),
+        warning.named('warning'),
+        error.named('error'),
+      ];
 }
 
 class ButtonColorsData {

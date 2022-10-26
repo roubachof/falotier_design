@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class AppIconsData {
   const AppIconsData({
     required this.fontFamily,
@@ -10,13 +12,13 @@ class AppIconsData {
   factory AppIconsData.regular() => AppIconsData(
         fontFamily: 'asgard_icons',
         fontPackage: 'asgard_core',
-        characters: AppIconCharactersData.regular(),
+        characters: AppIconData.regular(),
         sizes: AppIconSizesData.regular(),
       );
 
   final String fontFamily;
   final String? fontPackage;
-  final AppIconCharactersData characters;
+  final AppIconData characters;
   final AppIconSizesData sizes;
 
   @override
@@ -28,34 +30,19 @@ class AppIconsData {
       ];
 }
 
-class AppIconCharactersData {
-  const AppIconCharactersData({
-    required this.addProduct,
-    required this.arrowBack,
-    required this.dismiss,
-    required this.options,
-    required this.tag,
-    required this.vikoin,
-    required this.shoppingCart,
+class AppIconData {
+  const AppIconData({
+    required this.addLamp,
+    required this.location,
   });
 
-  factory AppIconCharactersData.regular() => AppIconCharactersData(
-        addProduct: String.fromCharCodes([57344, 58343, 58413, 57568]),
-        arrowBack: String.fromCharCodes([57344, 58537, 59260, 57572]),
-        dismiss: String.fromCharCodes([57344, 57911, 61195, 57514]),
-        options: String.fromCharCodes([58088, 58314, 57452]),
-        tag: String.fromCharCodes([59112, 57969, 57576]),
-        vikoin: String.fromCharCodes([57344, 57929, 57730, 57522]),
-        shoppingCart: String.fromCharCodes([57344, 58580, 57759, 57350]),
+  factory AppIconData.regular() => const AppIconData(
+        addLamp: Icons.add,
+        location: Icons.location_city,
       );
 
-  final String addProduct;
-  final String arrowBack;
-  final String dismiss;
-  final String options;
-  final String tag;
-  final String vikoin;
-  final String shoppingCart;
+  final IconData addLamp;
+  final IconData location;
 }
 
 class AppIconSizesData {

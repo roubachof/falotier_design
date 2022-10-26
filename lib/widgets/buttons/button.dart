@@ -1,10 +1,10 @@
+import 'package:falotier_design/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:otio_design/theme/theme.dart';
 
-abstract class BaseButton extends StatelessWidget {
+abstract class AppBaseButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;
-  const BaseButton(this.text, this.onPressed, {Key? key}) : super(key: key);
+  const AppBaseButton(this.text, this.onPressed, {Key? key}) : super(key: key);
 
   ButtonStyle getBaseStyle(BuildContext context) {
     final padding = AppTheme.of(context).spacing.asInsets().regular;
@@ -37,8 +37,8 @@ abstract class BaseButton extends StatelessWidget {
   }
 }
 
-class ButtonPrimary extends BaseButton {
-  const ButtonPrimary(String text, VoidCallback? onPressed, {Key? key})
+class AppButtonPrimary extends AppBaseButton {
+  const AppButtonPrimary(String text, VoidCallback? onPressed, {Key? key})
       : super(text, onPressed, key: key);
 
   @override
@@ -51,8 +51,8 @@ class ButtonPrimary extends BaseButton {
   }
 }
 
-class ButtonSecondary extends BaseButton {
-  const ButtonSecondary(String text, VoidCallback? onPressed, {Key? key})
+class AppButtonSecondary extends AppBaseButton {
+  const AppButtonSecondary(String text, VoidCallback? onPressed, {Key? key})
       : super(text, onPressed, key: key);
 
   @override
@@ -65,8 +65,8 @@ class ButtonSecondary extends BaseButton {
   }
 }
 
-class ButtonThird extends BaseButton {
-  const ButtonThird(String text, VoidCallback? onPressed, {Key? key})
+class AppButtonThird extends AppBaseButton {
+  const AppButtonThird(String text, VoidCallback? onPressed, {Key? key})
       : super(text, onPressed, key: key);
 
   @override

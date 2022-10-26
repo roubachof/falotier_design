@@ -32,7 +32,7 @@ class AppThemeData {
         formFactor: AppFormFactor.medium,
         icons: AppIconsData.regular(),
         typography: AppTypographyData.regular(),
-        colors: AppColorsData.light(),
+        colors: AppColorsData.dark(),
         radius: const AppRadiusData.regular(),
         spacing: AppSpacingData.regular(),
         shadow: AppShadowsData.regular(),

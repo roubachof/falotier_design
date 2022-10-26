@@ -1,4 +1,4 @@
-library otio_design;
+library falotier_design;
 
 export 'package:flutter/widgets.dart';
 

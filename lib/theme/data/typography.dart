@@ -1,13 +1,19 @@
 import 'package:flutter/rendering.dart';
 
 abstract class TypographyConstants {
-  static const String displayBold = 'SFProDisplayBold';
-  static const String textBold = 'SFProTextBold';
-  static const String textMedium = 'SFProTextMedium';
-  static const String textRegular = 'SFProTextRegular';
-  static const String textSemibold = 'SFProTextSemibold';
+  // static const String displayBold = 'SFProDisplayBold';
+  // static const String textBold = 'SFProTextBold';
+  // static const String textMedium = 'SFProTextMedium';
+  // static const String textRegular = 'SFProTextRegular';
+  // static const String textSemibold = 'SFProTextSemibold';
 
-  static const String packageName = 'otio_design';
+  static const String displayBold = 'OldNewspaperRegular';
+  static const String textBold = 'OldNewspaperRegular';
+  static const String textMedium = 'OldNewspaperRegular';
+  static const String textRegular = 'OldNewspaperRegular';
+  static const String textSemibold = 'OldNewspaperRegular';
+
+  static const String packageName = 'falotier_design';
 }
 
 class AppTypographyData {

@@ -7,6 +7,8 @@ class AppSpacingData {
     required this.regular,
     required this.semiBig,
     required this.big,
+    required this.semiHuge,
+    required this.huge,
   });
 
   factory AppSpacingData.regular() => const AppSpacingData(
@@ -15,6 +17,8 @@ class AppSpacingData {
         regular: 15,
         semiBig: 25,
         big: 35,
+        semiHuge: 50,
+        huge: 70,
       );
 
   final double small;
@@ -22,6 +26,8 @@ class AppSpacingData {
   final double regular;
   final double semiBig;
   final double big;
+  final double semiHuge;
+  final double huge;
 
   AppEdgeInsetsSpacingData asInsets() => AppEdgeInsetsSpacingData(this);
 }
@@ -34,6 +40,8 @@ class AppEdgeInsetsSpacingData {
   EdgeInsets get regular => EdgeInsets.all(_spacing.regular);
   EdgeInsets get semiBig => EdgeInsets.all(_spacing.semiBig);
   EdgeInsets get big => EdgeInsets.all(_spacing.big);
+  EdgeInsets get semiHuge => EdgeInsets.all(_spacing.semiHuge);
+  EdgeInsets get huge => EdgeInsets.all(_spacing.huge);
 
   final AppSpacingData _spacing;
 }

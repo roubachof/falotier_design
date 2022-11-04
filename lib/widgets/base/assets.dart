@@ -7,10 +7,31 @@ abstract class Assets {
   static const String _assetAudioPath = 'assets/audio';
   static const String _assetPrefix = 'asset:///';
 
-  static Image image(String imageName) {
+  static Image appImage(
+    Images imageName,
+    double? width,
+    double? height,
+  ) {
+    return Image.asset(
+      '$_assetImagePath/${imageName.filename}',
+      package: packageName,
+      width: width,
+      height: height,
+    );
+  }
+
+  static Image image(
+    String imageName, {
+    double? scale = 2,
+    double? width,
+    double? height,
+  }) {
     return Image.asset(
       '$_assetImagePath/$imageName',
       package: packageName,
+      scale: scale,
+      width: width,
+      height: height,
     );
   }
 
@@ -23,6 +44,11 @@ abstract class Assets {
   }
 }
 
-abstract class Images {
-  static Image get moon => Assets.image('moon.png');
+enum Images {
+  moon('moon.png'),
+  bomb('mac_bombs.png');
+
+  final String filename;
+
+  const Images(this.filename);
 }

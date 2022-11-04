@@ -2,30 +2,22 @@ import 'package:flutter/material.dart';
 
 class AppIconsData {
   const AppIconsData({
-    required this.fontFamily,
-    required this.fontPackage,
-    required this.characters,
+    required this.icons,
     required this.sizes,
   });
 
   /// Icons have been exported with "Export Icon Font" Figma plugin.
   factory AppIconsData.regular() => AppIconsData(
-        fontFamily: 'asgard_icons',
-        fontPackage: 'asgard_core',
-        characters: AppIconData.regular(),
+        icons: AppIconData.regular(),
         sizes: AppIconSizesData.regular(),
       );
 
-  final String fontFamily;
-  final String? fontPackage;
-  final AppIconData characters;
+  final AppIconData icons;
   final AppIconSizesData sizes;
 
   @override
   List<Object?> get props => [
-        fontFamily,
-        fontPackage,
-        characters,
+        icons,
         sizes,
       ];
 }

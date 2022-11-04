@@ -17,6 +17,7 @@ class AppText extends StatelessWidget {
     this.fontSize,
     this.maxLines,
     this.level = AppTextLevel.paragraphMedium,
+    this.softWrap,
   }) : super(key: key);
 
   const AppText.paragraphMedium(
@@ -25,6 +26,7 @@ class AppText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.maxLines,
+    this.softWrap,
   })  : level = AppTextLevel.paragraphMedium,
         super(key: key);
 
@@ -34,6 +36,7 @@ class AppText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.maxLines,
+    this.softWrap,
   })  : level = AppTextLevel.paragraphLarge,
         super(key: key);
 
@@ -43,6 +46,7 @@ class AppText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.maxLines,
+    this.softWrap,
   })  : level = AppTextLevel.subtitleMedium,
         super(key: key);
 
@@ -52,6 +56,7 @@ class AppText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.maxLines,
+    this.softWrap,
   })  : level = AppTextLevel.subtitleLarge,
         super(key: key);
 
@@ -61,6 +66,7 @@ class AppText extends StatelessWidget {
     this.color,
     this.fontSize,
     this.maxLines,
+    this.softWrap,
   })  : level = AppTextLevel.pageTitle,
         super(key: key);
 
@@ -69,6 +75,7 @@ class AppText extends StatelessWidget {
   final Color? color;
   final double? fontSize;
   final int? maxLines;
+  final bool? softWrap;
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +101,8 @@ class AppText extends StatelessWidget {
         color: color,
         fontSize: fontSize,
       ),
+      softWrap: softWrap,
+      textAlign: TextAlign.start,
       maxLines: maxLines,
     );
   }

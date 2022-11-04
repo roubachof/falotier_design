@@ -5,9 +5,14 @@ import 'package:flutter/rendering.dart';
 class AppColorsData extends Equatable {
   const AppColorsData({
     required this.accent,
+    required this.onAccent,
     required this.foreground,
     required this.background,
-    required this.foregroundSecondary,
+    required this.surface,
+    required this.darkOverlay,
+    required this.enlightened,
+    required this.foregroundAtNight,
+    required this.foregroundAtNoon,
     required this.backgroundSecondary,
     required this.success,
     required this.warning,
@@ -17,9 +22,14 @@ class AppColorsData extends Equatable {
 
   factory AppColorsData.light() => AppColorsData(
         accent: const Color(0xFF6C61E1),
+        onAccent: const Color(0xFF050505),
         foreground: const Color(0xFF28285a),
         background: const Color(0xFFecf5fb),
-        foregroundSecondary: const Color(0xFFFFFFFF),
+        surface: const Color(0xFF000000),
+        darkOverlay: const Color(0xFF000000).withOpacity(0.8),
+        enlightened: const Color(0xFFffa726).withOpacity(0.2),
+        foregroundAtNight: const Color(0xFFFFFFFF),
+        foregroundAtNoon: const Color(0xFF222222),
         backgroundSecondary: const Color(0xFF28285a),
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
@@ -29,9 +39,14 @@ class AppColorsData extends Equatable {
 
   factory AppColorsData.dark() => AppColorsData(
         accent: const Color(0xFFffa726),
+        onAccent: const Color(0xFF050505),
         foreground: const Color(0xFFf5f5f5),
         background: const Color(0xFF000000),
-        foregroundSecondary: const Color(0xFFFFFFFF),
+        surface: const Color(0xFF080808),
+        darkOverlay: const Color(0xFF000000).withOpacity(0.7),
+        enlightened: const Color(0xFFffa726).withOpacity(0.2),
+        foregroundAtNight: const Color(0xFF777777),
+        foregroundAtNoon: const Color(0xFFFFFFFF),
         backgroundSecondary: const Color(0xFF050505),
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
@@ -41,9 +56,14 @@ class AppColorsData extends Equatable {
 
   factory AppColorsData.highContrast() => AppColorsData(
         accent: const Color(0xFF6C61E1),
+        onAccent: const Color(0xFF050505),
         foreground: const Color(0xFF28285a),
         background: const Color(0xFFecf5fb),
-        foregroundSecondary: const Color(0xFFFFFFFF),
+        surface: const Color(0xFF000000),
+        darkOverlay: const Color(0xFF000000),
+        enlightened: const Color(0xFFffa726),
+        foregroundAtNight: const Color(0xFFFFFFFF),
+        foregroundAtNoon: const Color(0xFF222222),
         backgroundSecondary: const Color(0xFF28285a),
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
@@ -52,9 +72,14 @@ class AppColorsData extends Equatable {
       );
 
   final Color accent;
+  final Color onAccent;
   final Color foreground;
   final Color background;
-  final Color foregroundSecondary;
+  final Color surface;
+  final Color darkOverlay;
+  final Color enlightened;
+  final Color foregroundAtNight;
+  final Color foregroundAtNoon;
   final Color backgroundSecondary;
   final Color success;
   final Color warning;
@@ -67,7 +92,7 @@ class AppColorsData extends Equatable {
         accent.named('accent'),
         foreground.named('foreground'),
         background.named('background'),
-        foregroundSecondary.named('foregroundSecondary'),
+        foregroundAtNight.named('foregroundAtNight'),
         backgroundSecondary.named('backgroundSecondary'),
         success.named('success'),
         warning.named('warning'),

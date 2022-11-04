@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'data/form_factor.dart';
-import 'data/images.dart';
 import 'theme.dart';
 
 enum AppThemeColorMode {
@@ -57,24 +56,16 @@ class AppResponsiveTheme extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var theme = AppThemeData.regular(appLogo: appLogo);
+    var theme = AppThemeData.regular();
 
     /// Updating the colors for the current brightness
     final colorMode = this.colorMode ?? colorModeOf(context);
     switch (colorMode) {
       case AppThemeColorMode.dark:
         theme = theme.withColors(AppColorsData.dark());
-
-        final darkAppLogo = this.darkAppLogo;
-        if (darkAppLogo != null) {
-          theme = theme.withImages(theme.images.withAppLogo(darkAppLogo));
-        }
         break;
       case AppThemeColorMode.highContrast:
         theme = theme.withColors(AppColorsData.highContrast());
-        theme = theme.withImages(
-          AppImagesData.highContrast(appLogo: theme.images.appLogo),
-        );
         break;
       case AppThemeColorMode.light:
         break;

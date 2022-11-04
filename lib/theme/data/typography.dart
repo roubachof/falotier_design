@@ -44,7 +44,7 @@ class PageTypographyData implements TypographyConstants {
         pageTitle: TextStyle(
           fontFamily: TypographyConstants.displayBold,
           package: TypographyConstants.packageName,
-          fontSize: 32,
+          fontSize: 40,
           height: 1.3,
           letterSpacing: 0.4,
           decoration: TextDecoration.none,
@@ -52,15 +52,15 @@ class PageTypographyData implements TypographyConstants {
         subtitleLarge: TextStyle(
           fontFamily: TypographyConstants.displayBold,
           package: TypographyConstants.packageName,
-          fontSize: 20,
-          height: 1.4,
+          fontSize: 24,
+          height: 1.1,
           letterSpacing: -0.2,
           decoration: TextDecoration.none,
         ),
         subtitleMedium: TextStyle(
           fontFamily: TypographyConstants.textBold,
           package: TypographyConstants.packageName,
-          fontSize: 17,
+          fontSize: 20,
           height: 1.3,
           letterSpacing: -0.4,
           decoration: TextDecoration.none,
@@ -68,7 +68,7 @@ class PageTypographyData implements TypographyConstants {
         paragraphLarge: TextStyle(
           fontFamily: TypographyConstants.textRegular,
           package: TypographyConstants.packageName,
-          fontSize: 17,
+          fontSize: 16,
           height: 1.3,
           letterSpacing: -0.4,
           decoration: TextDecoration.none,

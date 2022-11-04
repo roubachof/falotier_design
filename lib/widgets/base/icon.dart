@@ -49,7 +49,7 @@ class AppIcon extends StatelessWidget {
   })  : size = AppIconSize.big,
         super(key: key);
 
-  final String data;
+  final IconData data;
   final Color? color;
   final AppIconSize size;
 
@@ -57,59 +57,10 @@ class AppIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = AppTheme.of(context);
     final color = this.color ?? theme.colors.foreground;
-    return Text(
+    return Icon(
       data,
-      style: TextStyle(
-        fontFamily: theme.icons.fontFamily,
-        package: theme.icons.fontPackage,
-        color: color,
-        fontSize: theme.icons.sizes.resolve(size),
-        decoration: TextDecoration.none,
-      ),
-    );
-  }
-}
-
-class AppAnimatedIcon extends StatelessWidget {
-  const AppAnimatedIcon(
-    this.data, {
-    Key? key,
-    this.color,
-    this.size = AppIconSize.small,
-    this.duration = const Duration(milliseconds: 200),
-  }) : super(key: key);
-
-  final String data;
-  final Color? color;
-  final AppIconSize size;
-  final Duration duration;
-
-  bool get isAnimated => duration.inMilliseconds > 0;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
-    final color = this.color ?? theme.colors.foreground;
-    if (!isAnimated) {
-      return AppIcon(
-        data,
-        key: key,
-        color: color,
-        size: size,
-      );
-    }
-    return AnimatedDefaultTextStyle(
-      child: Text(
-        data,
-      ),
-      style: TextStyle(
-        fontFamily: theme.icons.fontFamily,
-        package: theme.icons.fontPackage,
-        color: color,
-        fontSize: theme.icons.sizes.resolve(size),
-        decoration: TextDecoration.none,
-      ),
-      duration: duration,
+      color: color,
+      size: theme.icons.sizes.resolve(size),
     );
   }
 }

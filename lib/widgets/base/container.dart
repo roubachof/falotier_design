@@ -10,6 +10,7 @@ class AppContainer extends StatelessWidget {
     this.height,
     this.padding,
     this.margin,
+    this.backgroundColor,
     this.decoration,
     this.foregroundDecoration,
     this.alignment,
@@ -22,6 +23,7 @@ class AppContainer extends StatelessWidget {
 
   final AppEdgeInsets? padding;
   final AppEdgeInsets? margin;
+  final Color? backgroundColor;
   final Decoration? decoration;
   final Decoration? foregroundDecoration;
   final double? width;
@@ -41,6 +43,7 @@ class AppContainer extends StatelessWidget {
       height: height,
       padding: padding?.toEdgeInsets(theme),
       margin: margin?.toEdgeInsets(theme),
+      color: backgroundColor,
       decoration: decoration,
       foregroundDecoration: foregroundDecoration,
       alignment: alignment,

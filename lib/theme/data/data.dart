@@ -1,11 +1,9 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'colors.dart';
 import 'durations.dart';
 import 'form_factor.dart';
 import 'icons.dart';
-import 'images.dart';
 import 'radius.dart';
 import 'shadows.dart';
 import 'spacing.dart';
@@ -20,15 +18,11 @@ class AppThemeData {
     required this.spacing,
     required this.shadow,
     required this.durations,
-    required this.images,
     required this.formFactor,
     TargetPlatform? platform,
   }) : _platform = platform;
 
-  factory AppThemeData.regular({
-    required PictureProvider appLogo,
-  }) =>
-      AppThemeData(
+  factory AppThemeData.regular() => AppThemeData(
         formFactor: AppFormFactor.medium,
         icons: AppIconsData.regular(),
         typography: AppTypographyData.regular(),
@@ -37,9 +31,6 @@ class AppThemeData {
         spacing: AppSpacingData.regular(),
         shadow: AppShadowsData.regular(),
         durations: AppDurationsData.regular(),
-        images: AppImagesData.regular(
-          appLogo: appLogo,
-        ),
       );
 
   final AppIconsData icons;
@@ -49,7 +40,6 @@ class AppThemeData {
   final AppSpacingData spacing;
   final AppShadowsData shadow;
   final AppDurationsData durations;
-  final AppImagesData images;
   final AppFormFactor formFactor;
   final TargetPlatform? _platform;
   TargetPlatform get platform => defaultTargetPlatform;
@@ -61,22 +51,6 @@ class AppThemeData {
       colors: colors,
       durations: durations,
       icons: icons,
-      images: images,
-      radius: radius,
-      shadow: shadow,
-      spacing: spacing,
-      typography: typography,
-    );
-  }
-
-  AppThemeData withImages(AppImagesData images) {
-    return AppThemeData(
-      platform: platform,
-      formFactor: formFactor,
-      colors: colors,
-      durations: durations,
-      icons: icons,
-      images: images,
       radius: radius,
       shadow: shadow,
       spacing: spacing,
@@ -91,7 +65,6 @@ class AppThemeData {
       colors: colors,
       durations: durations,
       icons: icons,
-      images: images,
       radius: radius,
       shadow: shadow,
       spacing: spacing,
@@ -106,7 +79,6 @@ class AppThemeData {
       colors: colors,
       durations: durations,
       icons: icons,
-      images: images,
       radius: radius,
       shadow: shadow,
       spacing: spacing,

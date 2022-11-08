@@ -43,6 +43,7 @@ class AppErrorWidget extends StatelessWidget {
                   _errorMessage,
                   maxLines: 2,
                 ),
+                const AppGap.regular(),
                 AppButtonPrimary(buttonText, _onTap),
               ],
             ),

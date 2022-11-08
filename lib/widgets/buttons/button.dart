@@ -7,11 +7,11 @@ abstract class AppBaseButton extends StatelessWidget {
   const AppBaseButton(this.text, this.onPressed, {Key? key}) : super(key: key);
 
   ButtonStyle getBaseStyle(BuildContext context) {
-    final padding = AppTheme.of(context).spacing.asInsets().regular;
+    final padding = AppTheme.of(context).spacing.asInsets().small;
     final radius = AppTheme.of(context).radius.small;
 
     return TextButton.styleFrom(
-      minimumSize: const Size(88, 50),
+      minimumSize: const Size(88, 40),
       padding: padding,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(radius),
@@ -45,8 +45,8 @@ class AppButtonPrimary extends AppBaseButton {
   ButtonStyle getImplementationStyle(BuildContext context) {
     final colors = AppTheme.of(context).colors;
     return TextButton.styleFrom(
-      foregroundColor: colors.accent,
-      backgroundColor: colors.onAccent,
+      foregroundColor: colors.onAccent,
+      backgroundColor: colors.accent,
     );
   }
 }

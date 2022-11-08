@@ -10,13 +10,15 @@ abstract class Assets {
   static Image appImage(
     Images imageName,
     double? width,
-    double? height,
-  ) {
+    double? height, {
+    BoxFit? fit,
+  }) {
     return Image.asset(
       '$_assetImagePath/${imageName.filename}',
       package: packageName,
       width: width,
       height: height,
+      fit: fit,
     );
   }
 
@@ -25,6 +27,7 @@ abstract class Assets {
     double? scale = 2,
     double? width,
     double? height,
+    BoxFit? fit,
   }) {
     return Image.asset(
       '$_assetImagePath/$imageName',
@@ -32,6 +35,7 @@ abstract class Assets {
       scale: scale,
       width: width,
       height: height,
+      fit: fit,
     );
   }
 
@@ -46,6 +50,7 @@ abstract class Assets {
 
 enum Images {
   moon('moon.png'),
+  lamp('lamp.png'),
   bomb('mac_bombs.png');
 
   final String filename;

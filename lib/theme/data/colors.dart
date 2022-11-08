@@ -17,7 +17,7 @@ class AppColorsData extends Equatable {
     required this.success,
     required this.warning,
     required this.error,
-    required this.buttons,
+    // required this.buttons,
   });
 
   factory AppColorsData.light() => AppColorsData(
@@ -34,9 +34,11 @@ class AppColorsData extends Equatable {
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
         error: const Color(0xFFff7c56),
-        buttons: ButtonColorsData.light(),
+        // buttons: ButtonColorsData.light(),
       );
 
+  // Here we will just using the dark theme, since it's a
+  // 'night oriented app' (NOA).
   factory AppColorsData.dark() => AppColorsData(
         accent: const Color(0xFFffa726),
         onAccent: const Color(0xFF050505),
@@ -51,7 +53,7 @@ class AppColorsData extends Equatable {
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
         error: const Color(0xFFf4511e),
-        buttons: ButtonColorsData.dark(),
+        // buttons: ButtonColorsData.dark(),
       );
 
   factory AppColorsData.highContrast() => AppColorsData(
@@ -68,7 +70,7 @@ class AppColorsData extends Equatable {
         success: const Color(0xFF2cd99b),
         warning: const Color(0xFFffa83c),
         error: const Color(0xFFff7c56),
-        buttons: ButtonColorsData.light(),
+        // buttons: ButtonColorsData.light(),
       );
 
   final Color accent;
@@ -85,14 +87,19 @@ class AppColorsData extends Equatable {
   final Color warning;
   final Color error;
 
-  final ButtonColorsData buttons;
+  // final ButtonColorsData buttons;
 
   @override
   List<Object?> get props => [
         accent.named('accent'),
+        onAccent.named('onAccent'),
         foreground.named('foreground'),
         background.named('background'),
+        surface.named('surface'),
+        darkOverlay.named('darkOverlay'),
+        enlightened.named('enlightened'),
         foregroundAtNight.named('foregroundAtNight'),
+        foregroundAtNoon.named('foregroundAtNoon'),
         backgroundSecondary.named('backgroundSecondary'),
         success.named('success'),
         warning.named('warning'),
@@ -100,6 +107,7 @@ class AppColorsData extends Equatable {
       ];
 }
 
+// Can be useful if you have designer that love using too many colors
 class ButtonColorsData {
   const ButtonColorsData({
     required this.primaryBackground,

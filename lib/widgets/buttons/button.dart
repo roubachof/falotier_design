@@ -43,38 +43,38 @@ class AppButtonPrimary extends AppBaseButton {
 
   @override
   ButtonStyle getImplementationStyle(BuildContext context) {
-    final colors = AppTheme.of(context).colors.buttons;
+    final colors = AppTheme.of(context).colors;
     return TextButton.styleFrom(
-      foregroundColor: colors.primaryForeground,
-      backgroundColor: colors.primaryBackground,
+      foregroundColor: colors.accent,
+      backgroundColor: colors.onAccent,
     );
   }
 }
 
-class AppButtonSecondary extends AppBaseButton {
-  const AppButtonSecondary(String text, VoidCallback? onPressed, {Key? key})
-      : super(text, onPressed, key: key);
-
-  @override
-  ButtonStyle getImplementationStyle(BuildContext context) {
-    final colors = AppTheme.of(context).colors.buttons;
-    return TextButton.styleFrom(
-      foregroundColor: colors.secondaryForeground,
-      backgroundColor: colors.secondaryBackground,
-    );
-  }
-}
-
-class AppButtonThird extends AppBaseButton {
-  const AppButtonThird(String text, VoidCallback? onPressed, {Key? key})
-      : super(text, onPressed, key: key);
-
-  @override
-  ButtonStyle getImplementationStyle(BuildContext context) {
-    final colors = AppTheme.of(context).colors.buttons;
-    return TextButton.styleFrom(
-      foregroundColor: colors.thirdForeground,
-      backgroundColor: colors.thirdBackground,
-    );
-  }
-}
+// class AppButtonSecondary extends AppBaseButton {
+//   const AppButtonSecondary(String text, VoidCallback? onPressed, {Key? key})
+//       : super(text, onPressed, key: key);
+//
+//   @override
+//   ButtonStyle getImplementationStyle(BuildContext context) {
+//     final colors = AppTheme.of(context).colors.buttons;
+//     return TextButton.styleFrom(
+//       foregroundColor: colors.secondaryForeground,
+//       backgroundColor: colors.secondaryBackground,
+//     );
+//   }
+// }
+//
+// class AppButtonThird extends AppBaseButton {
+//   const AppButtonThird(String text, VoidCallback? onPressed, {Key? key})
+//       : super(text, onPressed, key: key);
+//
+//   @override
+//   ButtonStyle getImplementationStyle(BuildContext context) {
+//     final colors = AppTheme.of(context).colors.buttons;
+//     return TextButton.styleFrom(
+//       foregroundColor: colors.thirdForeground,
+//       backgroundColor: colors.thirdBackground,
+//     );
+//   }
+// }

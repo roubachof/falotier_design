@@ -38,8 +38,7 @@ abstract class AppBaseButton extends StatelessWidget {
 }
 
 class AppButtonPrimary extends AppBaseButton {
-  const AppButtonPrimary(String text, VoidCallback? onPressed, {Key? key})
-      : super(text, onPressed, key: key);
+  const AppButtonPrimary(super.text, super.onPressed, {super.key});
 
   @override
   ButtonStyle getImplementationStyle(BuildContext context) {

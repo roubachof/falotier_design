@@ -16,13 +16,13 @@ enum AppThemeColorMode {
 /// as soon as the [theme] isn't overridden.
 class AppResponsiveTheme extends StatelessWidget {
   const AppResponsiveTheme({
-    Key? key,
+    super.key,
     required this.appLogo,
     required this.child,
     this.darkAppLogo,
     this.colorMode,
     this.formFactor,
-  }) : super(key: key);
+  });
 
   final AppThemeColorMode? colorMode;
   final AppFormFactor? formFactor;

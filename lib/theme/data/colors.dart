@@ -56,20 +56,20 @@ class AppColorsData extends Equatable {
         // buttons: ButtonColorsData.dark(),
       );
 
-  factory AppColorsData.highContrast() => AppColorsData(
-        accent: const Color(0xFF6C61E1),
-        onAccent: const Color(0xFF050505),
-        foreground: const Color(0xFF28285a),
-        background: const Color(0xFFecf5fb),
-        surface: const Color(0xFF000000),
-        darkOverlay: const Color(0xFF000000),
-        enlightened: const Color(0xFFffa726),
-        foregroundAtNight: const Color(0xFFFFFFFF),
-        foregroundAtNoon: const Color(0xFF222222),
-        backgroundSecondary: const Color(0xFF28285a),
-        success: const Color(0xFF2cd99b),
-        warning: const Color(0xFFffa83c),
-        error: const Color(0xFFff7c56),
+  factory AppColorsData.highContrast() => const AppColorsData(
+        accent: Color(0xFF6C61E1),
+        onAccent: Color(0xFF050505),
+        foreground: Color(0xFF28285a),
+        background: Color(0xFFecf5fb),
+        surface: Color(0xFF000000),
+        darkOverlay: Color(0xFF000000),
+        enlightened: Color(0xFFffa726),
+        foregroundAtNight: Color(0xFFFFFFFF),
+        foregroundAtNoon: Color(0xFF222222),
+        backgroundSecondary: Color(0xFF28285a),
+        success: Color(0xFF2cd99b),
+        warning: Color(0xFFffa83c),
+        error: Color(0xFFff7c56),
         // buttons: ButtonColorsData.light(),
       );
 

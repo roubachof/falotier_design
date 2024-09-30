@@ -10,14 +10,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.1.6
-  gap: ^2.0.0
+  flutter_svg: ^2.0.10+1
+  gap: ^3.0.1
   equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.1
+  flutter_lints: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -46,7 +46,6 @@ flutter:
         - asset: assets/fonts/OldNewspaperTypes.ttf
 
   assets:
-    - assets/audio/
     - assets/images/
 
   # To add assets to your package, add an assets section, like this:
